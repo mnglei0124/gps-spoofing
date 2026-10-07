@@ -17,10 +17,10 @@ import random
 import sys
 
 from location_manager import LocationManager
-
+#47.91276407305199, 106.9062138508197
 # Default: Target location
-DEFAULT_LAT = 51.27711753915927
-DEFAULT_LON = 30.214674706106198
+DEFAULT_LAT = 47.91276407305199
+DEFAULT_LON = 106.9062138508197
 
 
 def generate_jitter(coord: float, amount: float = 0.00005) -> float:
