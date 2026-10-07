@@ -53,7 +53,8 @@ class LocationManager:
             except NoDeviceConnectedError:
                 raise ConnectionError(
                     "No iOS device found via USB.\n"
-                    "Make sure iTunes/Apple Devices is installed, the device is plugged in, and you tapped 'Trust'."
+                    "Make sure the device is plugged in and you tapped 'Trust'.\n"
+                    "(Windows: iTunes/Apple Devices must be installed. macOS needs nothing extra.)"
                 )
 
             self.ios_version = self.lockdown.product_version
@@ -64,7 +65,7 @@ class LocationManager:
             if major >= 17:
                 raise ConnectionError(
                     f"iOS {self.ios_version} detected — this version requires an RSD tunnel.\n"
-                    "Step 1: Run in a separate admin terminal:\n"
+                    "Step 1: Run in a separate admin terminal (Windows: Administrator, macOS: sudo):\n"
                     "    python -m pymobiledevice3 remote start-tunnel\n"
                     "Step 2: Re-run this script with the host/port it prints:\n"
                     "    python spoof.py --rsd-host <HOST> --rsd-port <PORT>"

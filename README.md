@@ -22,6 +22,16 @@ Supports all iOS versions, including **iOS 17 and iOS 18**.
 1. Clone or download this repository.
 2. Double-click **`setup_windows.bat`** to automatically install all required Python libraries.
 
+## 🍎 Installation (macOS)
+
+1. Install Python 3.10+ (`brew install python` or from [python.org](https://www.python.org/)). No iTunes needed.
+2. Run the setup script:
+   ```bash
+   chmod +x setup_mac.sh && ./setup_mac.sh
+   source .venv/bin/activate
+   ```
+3. Use `python spoof.py ...` as below. For iOS 17+, start the tunnel with `sudo python -m pymobiledevice3 remote tunneld` (use the venv's python, e.g. `sudo .venv/bin/python -m pymobiledevice3 remote tunneld`).
+
 ---
 
 ## 🚀 How to Use
